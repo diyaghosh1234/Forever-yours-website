@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Wish</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "E_8ysiHm5tuhlws8O",
+  });
+})();
+</script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff6ec7, 0 0 30px #ff6ec7; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #ff1493, 0 0 40px #ff1493; }
+        }
+
+        input {
+            padding: 12px;
+            width: 280px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 2px solid #ff6ec7;
+            outline: none;
+            text-align: center;
+            box-shadow: 0 0 10px #ff6ec7;
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            backdrop-filter: blur(5px);
+        }
+
+        input::placeholder {
+            color: #fff;
+            opacity: 0.7;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0 0 15px #ff1493;
+        }
+
+        button:hover {
+            background-color: #ff6ec7;
+            box-shadow: 0 0 25px #ff6ec7;
+        }
+
+        .video-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .final-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: gold;
+            font-size: 40px;
+            text-shadow: 0 0 20px gold;
+            font-weight: bold;
+            text-align: center;
+            z-index: 1001;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        .options button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background: #ff1493;
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 0 15px #ff1493;
+        }
+
+        .options button:hover {
+            background: #ff6ec7;
+            box-shadow: 0 0 25px #ff6ec7;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Make a Wish ✨</h1>
+    <div class="wish-container">
+        <input type="text" id="wishInput" placeholder="Type your wish here...">
+        <br>
+        <button onclick="makeWish()">Submit</button>
+    </div>
+
+    <div class="video-container" id="videoContainer">
+        <video id="coinVideo" src="flipcoin.mp4"></video>
+    </div>
+
+    <div class="final-message" id="grantedMessage">
+        ✨ Your Wish is Granted! ✨
+        <div class="options">
+            <button onclick="restartWish()">Make Another Wish</button>
+            <button onclick="goToMainPage()">Go Back to Main Page</button>
+        </div>
+    </div>
+
+    <script>
+        function makeWish() {
+            let wishText = document.getElementById('wishInput').value.trim();
+            if (!wishText) { alert("Please enter a wish!"); return; }
+            document.querySelector(".wish-container").style.display = "none";
+            document.getElementById("videoContainer").style.display = "flex";
+            document.getElementById("coinVideo").play();
+            sendWishToEmail(wishText);
+            document.getElementById("coinVideo").onended = function() {
+                document.getElementById("videoContainer").style.display = "none";
+                document.getElementById("grantedMessage").style.display = "block";
+            };
+        }
+        function sendWishToEmail(wish) {
+            emailjs.send("service_7elz387", "template_ow6wcpd", { wish: wish })
+                .then(response => console.log("Email sent:", response))
+                .catch(error => console.error("Email error:", error));
+        }
+        function restartWish() { location.reload(); }
+        function goToMainPage() { window.location.href = "index.html"; }
+    </script>
+</body>
+</html>

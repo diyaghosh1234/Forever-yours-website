@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Scrapbook</title>
+    <style>
+        body {
+            background-color: #f8f3f8;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .scrapbook {
+            width: 80%;
+            height: 80vh;
+            background-color: #fff;
+            border: 5px solid #f9c6d3;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #fff9fb;
+            transition: left 0.6s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .page.active {
+            left: 0;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0 20px;
+        }
+
+        .btn {
+            background-color: #ff8fa3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover:not(:disabled) {
+            background-color: #ff5e78;
+        }
+
+        .btn:disabled {
+            background-color: #ffd1db;
+            cursor: not-allowed;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff5e78;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrapbook">
+        <div class="page active">
+            <h2>2018: Our First Memory</h2>
+            <h3>সত্যি তোকে প্রথম দেখে ভাবিনি যে তুই আমার এত কাছের এত আদরের একজন মানুষ হবি 3rd january 2018 শীতকালের সকাল প্রথম দেখলাম cute তো তুই ছিলি no doubt but প্রথম স্টেপ আমি নিয়েছিলাম if you remember 😎 সত্যি এখনও দিনটা একদম পরিষ্কার মনে আছে|| সত্যি বলতে তোকে দেখে ভাবিনি যে মানে তুই এতোটা lover ছেলে সত্যি তুই যে এত সুন্দর ভালো ও বস্তে পারিস এটা আমার অজানাই থেকে যেত || তুই এতো একটা চঞ্চল বাচা ছিলি মানে আমি না ডেইলি পড়তে গিয়ে শুধু ভাবতাম এই ছেলেটা এত কথা কিভাবে বলতে পারে এত্ত কিভাবে হাসতে পারে হা তোর হাসিটা ভাই জানি না তুই বিশ্বাস করবি কিনা বা তার হাসিটা আমার একদম ফার্স্ট থেকেই এত্ত cute লাগতো মানে বলে বুঝানোর মতন না এত মিষ্টি একটা হাসি|| আর তুই কি কি না করতি ভাই এত্ত মানে careless একটা personality এত্ত্ব caring হয়ে গেলো ভাবা যায় || আর কিছু তো বললাম না যাই হোক 🤭 </h3>
+        </div>
+        <div class="page">
+            <h2>2019: Best Friends</h2>
+            <h3>Class 9 2019 where we began to talk with each other with daily basis in 2018 we used to address each other by তুমি but 2019 e সেটা তু্ই হয়ে গেলো যার সাথে 2018 e ocationally কথা হতো তার সাথে প্রতিদিন কথা বলা শুরু হয়ে গেলো আর ছেলেটা আমার বেস্ট ফ্রেন্ড হয়ে গেলো যাকএ I NEVER WANTED TO LOOSE || আর 2019 এর বার্থডে যেখানে আমি যাই নাই যার জন্যে আমাকে এখনো কথা শুনতে হয় but in my birthday he gave me onek boro dairy milk celebration chocolate তাও gift wrap করে it may sound stupid like what is so special about it but it is special it is really really special for me and 2019 এর হোলি খেলা মানে ওই দিন আবির খেলা ছিলো র ওই দিন টিউশন ছিলো so আমরা সবাই এ আবির নিয়ে গেছিলাম but ছেলের একটু আবির দেওয়ার পর এ মাথা ব্যাথা শুরু হয়ে গেছিল তাই ও বাড়ি চলে যায় মানে এত্ত নাজুক হলে যা হয়|| এছাড়াও আমি জানতে পারি মানে যে শঙ্কুর এর একজন crush ও আছে মানে এতো পাকা ধারণার বাইরে || </h3>
+        </div>
+        <div class="page">
+            <h2>2020: Love is in the air</h2>
+            <h3>একটু একটু ভালোবাসার শুরুয়াত আমি যে ভালোবাসব প্রেম করবো কখনো ভাবিনি but this boy he gave me 143 reasons to fall in love with him which I can't resist and the best part is this is just the beginning of our story.I get to know about his crush her name which is none other than meeeee ওই যে বললাম পাকা বাচ্চা our love story is old school type where we both are so much shy to confront our feelings infront of each other but we both knew that we have feelings for each other 🤭🤭 সারাদিন আমরা এত কথা বলতাম এমনকি এখনো ততটাই বলি but সেই দিনগুলোর কোনো তুলনা হয় না That feeling of falling in love is just speechless ❤️🌟</h3>
+        </div>
+        <div class="page">
+            <h2>2021: Love is behind the mask</h2>
+            <h3>From the starting of 2021 it was lockdown we can't to get see each other everything is closed but but but in this time we used to talk with each other alotttt yeah that's it for this year bekar year though I felt good enough that time because I have him ❤️🌟</h3>
+        </div>
+        <div class="page">
+            <h2>2022: Falling in love with you a little bit more</h2>
+            <h3>This year is just G.O.A.T that's it basically we in this year we are in class 12 and we used to go in tuition with each other by cycle so we get to spent a lot of time with each other and we used to have a lot of fun but no we never bunked any batch but we used to eat with each other from food stalls ঢাকাই পরোটা, মোম, চিকেন পকোড়া, ফুচকা, আইস ক্রিম, চিপস and so on আর এত ছোঁচা ছিল শঙ্কুর নিজের তাতো খাবেই সাথে আমার তও করে খেয়ে নিত ভাই হয়্ হয়য় এই বছর আমাদের ফার্স্ট বসন্ত উৎসব ছেলে সাহস করে একা গেছে just for me এর থেকে lucky আর কি আছে ওর গালে আবির দেয়া একসাথে ফটো তোলা just❤️ এই বছর আমার বার্থডে তে ও আমাকে একটা কানের গিফট করে যেটা আমি অনেক যত্ন করে রেখেছি 🌟 আর এই বছর আমরা একসাথে দূর্গা পূজা দেখেছি মানে টিউশন থেকে আসার সময় একটু ওই আর্কি এছারাও অষ্টমী তেও একসাথে টাইম স্পেন্ড করেছি যেটা কিনা খুব special for me❤️🌟</h3>
+        </div>
+        <div class="page">
+            <h2>2023: Love you to the moon and back</h2>
+            <h3>এই বছর আমাদের লাইফ এ অনেক বড়ো changes এসে now we are in different college আমাদের এখন আর আগের মতন রোজ দেখা হয় না আমরা রোজ সাইকেল নিয়ে পড়তে যাই না যেটা I don't like but আগে আমাদের দেখা হতো কারণে যেমন টিউশন যাই জন্যে but এখন আমরা দেখা করি একে অপরের জন্যে একে অপরকে দেখার জন্যে এখন আমরা দেখা করি ভালোবাসার জন্যে একে অপরকে ভালোবাসি জন্যে❤️ এই বছর শঙ্কুর আমার বার্থডে তে আমাদের বাড়ি এসে বুট সত্যিই বলতে আমি বার্থডে করতে বলেছিলাম ওকে বলবো জন্যে🤭 এই বছর আমরা ফার্স্ট একসাথে একই স্কোটি করে দূর্গা পূজায় ঘুরতে যাই 🤭🤭 সেই ফিলিং তা বলে বুঝানো মতন না একে অপরের মনে ভয় বা আবার ভালোবাসার মানুষটাকে কাছে পাওয়ার পূর্ণতা বুট পূর্ণতা মানে এই না যে বহুত কিছু হয়ে গেছেনা ভাই না ওইজ ফার্স্ট এই বললাম old school type আমি জানি না কেন but শঙ্কুর যখন সামনে থাকে তখন মাথায় আর অন্য কিছু আসে না শুধু মনে হয় সারাদিন সারারাত আমার সারা জীবন ওকে দেখি ওর চোখের দিকে তাকিয়ে থাকি ওর মিষ্টি হাসি তা দেখি এতো সুন্দর এতো স্নিগ্ধ একটা মানুষ কিভাবে হতে পারে❤️🌟</h3>
+        </div>
+        <div class="page">
+            <h2>2024: Love is beautiful</h2>
+            <h3> এই বছরের নাম এ তো আগেই অনেক কিছু বলে ফেলেছি লাস্ট যে শুধু একটাই কথা বলবো এই বছরের এক একটা মোমেন্ট just enchanted which can't be expressed through words এতো দায়িত্ব নিজের পড়া সামলানোর পরেও আমার জন্যে তুই যা করিস I am so much grateful❤️🌟</h3>
+        </div>
+        <div class="navigation">
+            <button class="btn" onclick="prevPage()" id="prevBtn">Previous</button>
+            <button class="btn" id="mainPageBtn" onclick="goToMainPage()" style="display: none;">Back to Main Page</button>
+            <button class="btn" onclick="nextPage()" id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const mainPageBtn = document.getElementById('mainPageBtn');
+
+        function updateButtons() {
+            prevBtn.disabled = currentPage === 0;
+            if (currentPage === pages.length - 1) {
+                nextBtn.style.display = 'none';
+                mainPageBtn.style.display = 'block';
+            } else {
+                nextBtn.style.display = 'block';
+                mainPageBtn.style.display = 'none';
+            }
+        }
+
+        function showPage(index) {
+            pages.forEach((page, i) => {
+                page.classList.remove('active');
+                if (i === index) {
+                    page.classList.add('active');
+                }
+            });
+            updateButtons();
+        }
+
+        function nextPage() {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+
+        function goToMainPage() {
+            window.location.href = 'index.html'; // Link to main page
+        }
+
+        updateButtons();
+    </script>
+</body>
+</html>
